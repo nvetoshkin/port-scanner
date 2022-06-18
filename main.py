@@ -11,10 +11,13 @@ def setup_routes(application):
 def setup_app(application):
    setup_routes(application)
 
-app = web.Application()
+def create_app():
+   app = web.Application()
+   setup_app(app)
+   return app
 
 if __name__ == "__main__":
-   setup_app(app)
+   app = create_app()
    try:
       web.run_app(app, host="0.0.0.0", port=80)
    except:
