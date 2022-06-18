@@ -19,6 +19,7 @@
 > 
 > &emsp; views.py
 ## ♻️Установка через rpm
+**spec-файл прилагается**
 ```
 sudo dnf install scan-1.0-1.0.noarch.rpm
 ```
@@ -33,6 +34,9 @@ sudo rpm -ivh scan-1.0-1.0.noarch.rpm
 ```
 sudo python main.py
 ```
+## 🌙Логи
+Логи пишутся в syslog по 514 порту через модуль Python - **syslog**
+
 ## 🌆Тесты
 ```
 python test.py
